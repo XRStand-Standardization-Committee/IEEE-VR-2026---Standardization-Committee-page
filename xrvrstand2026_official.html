@@ -221,6 +221,25 @@
         box-shadow: 0 8px 25px rgba(0, 212, 170, 0.2);
     }
     
+    .std-member-card-simple {
+        background: white;
+        border-radius: 15px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #1e2875;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .std-member-card-simple:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(30, 40, 117, 0.2);
+    }
+    
     .std-member-photo {
         width: 140px;
         height: 140px;
@@ -292,7 +311,7 @@
 
 <div class="std-committee-section" id="standardization-committee">
     <div class="std-committee-content">
-        <h2>Standardization Committee</h2>
+        <h2>XR/VR Standardization Committee</h2>
         <div class="std-conference-subtitle">IEEE VR 2026 · Daegu, Korea</div>
         
         <div class="std-committee-email">
@@ -350,111 +369,98 @@
 
     <h3>Committee General Chairs</h3>
     <div class="std-member-grid std-chairs-grid">
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Yahya Hmaiti" class="std-member-photo">
-            <div class="std-member-name">Yahya Hmaiti</div>
-            <div class="std-member-affiliation">University of Central Florida, US</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
+        <div class="std-member-card-simple">
+            <img src="images/Yahya%20Hmaiti.jpg" alt="Yahya Hmaiti" class="std-member-photo">
+            <div class="std-member-name">Yahya (Yohan) Hmaiti</div>
+            <div class="std-member-affiliation">University of Central Florida, USA</div>
+            <!-- <div class="std-member-bio" style="text-align: justify;">
+                Yahya is a Ph.D. student in Computer Science at the University of Central Florida and a member of the Interactive Systems and User Experience (ISUE) Lab, advised by Dr. Joseph J. LaViola Jr. His research focuses on security and privacy, human-computer interaction in immersive environments, encompassing 3D user interfaces, virtual avatars, collaborative XR systems, and the application of machine learning within VR contexts. Yohan's current work explores new methods to improve privacy preference profiling, user-centred privacy and security, and the utilization of intelligent conversational virtual agents and natural language processing to enhance interaction in virtual environments.
+            </div> -->
         </div>
-        
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Ryosuke Ichikari" class="std-member-photo">
-            <div class="std-member-name">Ryosuke Ichikari</div>
-            <div class="std-member-affiliation">AIST, Japan</div>
-            <div class="std-member-bio">
+
+        <div class="std-member-card-simple">
+            <img src="images/default-profile.jpg" alt="Jen-Shuo Liu" class="std-member-photo">
+            <div class="std-member-name">Jen-Shuo Liu</div>
+            <div class="std-member-affiliation">Columbia University, USA</div>
+            <!-- <div class="std-member-bio" style="text-align: justify;">
                 TODO
-            </div>
+            </div> -->
         </div>
-        
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Seonji Kim" class="std-member-photo">
+
+        <div class="std-member-card-simple">
+            <img src="images/Seonji%20kim.jpg" alt="Seonji Kim" class="std-member-photo">
             <div class="std-member-name">Seonji Kim</div>
             <div class="std-member-affiliation">KAIST, South Korea</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
+            <!-- <div class="std-member-bio" style="text-align: justify;">
+                Seonji Kim is a Ph.D. student in the Graduate School of Culture Technology (GSCT) at KAIST, Daejeon, Korea, and a member of the Ubiquitous Virtual Reality (UVR) Lab, advised by Prof. Woontack Woo. Her research interests include ubiquitous virtual reality, augmented reality, remote collaboration, and spatial computing. She received her M.S. degree in GSCT from KAIST, Korea, in 2023 and her B.S. degree in Computer Science and Engineering from Sungkyunkwan University, Korea, in 2021. You can contact her at seonji.kim@kaist.ac.kr.
+            </div> -->
         </div>
         
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Jen-Shuo Liu" class="std-member-photo">
-            <div class="std-member-name">Jen-Shuo Liu</div>
-            <div class="std-member-affiliation">Columbia University, US</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
+        <div class="std-member-card-simple">
+            <img src="images/Ryosuke%20Ichikari.jpg" alt="Ryosuke Ichikari" class="std-member-photo">
+            <div class="std-member-name">Ryosuke Ichikari</div>
+            <div class="std-member-affiliation">AIST, Japan</div>
+            <!-- <div class="std-member-bio" style="text-align: justify;">
+                Ryosuke Ichikari received his Ph.D. in engineering from Ritsumeikan University in 2010. After working at Ritsumeikan University, University of Southern California, he joined National Institute of Advanced Industrial Science and Technology (AIST). Currently, he is a research group leader at Research Institute on Human and Societal Augmentation, AIST. His research interest includes virtual/augmented/mixed reality and indoor positioning, and service engineering.
+            </div> -->
         </div>
+        
+
     </div>
 
     <h3>Committee Members</h3>
     <div class="std-member-grid std-members-grid">
-                <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Abolghasem Sadeghi-Niaraki" class="std-member-photo">
+        <div class="std-member-card-simple">
+            <img src="images/abolghasem.jpg" alt="Abolghasem Sadeghi-Niaraki" class="std-member-photo">
             <div class="std-member-name">Abolghasem Sadeghi-Niaraki</div>
             <div class="std-member-affiliation">Sejong University, South Korea</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
-        </div>
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Mykola Maslych" class="std-member-photo">
-            <div class="std-member-name">Mykola Maslych</div>
-            <div class="std-member-affiliation">University of Central Florida, US</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
         </div>
         
-
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Jean Botev" class="std-member-photo">
+        <div class="std-member-card-simple">
+            <!-- <img src="images/mykola.jpeg" alt="Mykola Maslych" class="std-member-photo"> -->
+            <!-- <img src="images/mykola.jpg" alt="Mykola Maslych" class="std-member-photo"> -->
+            <img src="images/mykola.png" alt="Mykola Maslych" class="std-member-photo">
+            <div class="std-member-name">Mykola Maslych</div>
+            <div class="std-member-affiliation">University of Central Florida, USA</div>
+        </div>
+        
+        <div class="std-member-card-simple">
+            <img src="images/jeanbotev.png" alt="Jean Botev" class="std-member-photo">
             <div class="std-member-name">Jean Botev</div>
             <div class="std-member-affiliation">University of Luxembourg, Luxembourg</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
         </div>
         
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Seoyoung Kang" class="std-member-photo">
+        <div class="std-member-card-simple">
+            <img src="images/SeoYoungKang.jpg" alt="Seoyoung Kang" class="std-member-photo">
             <div class="std-member-name">Seoyoung Kang</div>
             <div class="std-member-affiliation">KAIST, South Korea</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
         </div>
         
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Dooyoung Kim" class="std-member-photo">
+        <div class="std-member-card-simple">
+            <img src="images/Dooyoung%20kim.jpg" alt="Dooyoung Kim" class="std-member-photo">
             <div class="std-member-name">Dooyoung Kim</div>
             <div class="std-member-affiliation">KAIST, South Korea</div>
-            <div class="std-member-bio">
-                TODO
-            </div>
         </div>
-        
- 
     </div>
 
     <h3>Committee Advisors</h3>
     <div class="std-member-grid std-advisors-grid">
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Takeshi Kurata" class="std-member-photo">
+        <div class="std-member-card-simple">
+            <img src="images/Takeshi%20Kurata.jpg" alt="Takeshi Kurata" class="std-member-photo">
             <div class="std-member-name">Takeshi Kurata</div>
             <div class="std-member-affiliation">AIST, Japan</div>
-            <div class="std-member-bio">
+            <!-- <div class="std-member-bio">
                 TODO
-            </div>
+            </div> -->
         </div>
         
-        <div class="std-member-card">
-            <img src="images/committee/default-profile.jpg" alt="Christine Perey" class="std-member-photo">
+        <div class="std-member-card-simple">
+            <img src="images/Christine%20Perey.jpeg" alt="Christine Perey" class="std-member-photo">
             <div class="std-member-name">Christine Perey</div>
             <div class="std-member-affiliation">Spime Wrangler, Switzerland</div>
-            <div class="std-member-bio">
+            <!-- <div class="std-member-bio">
                 TODO
-            </div>
+            </div> -->
         </div>
     </div>
     
