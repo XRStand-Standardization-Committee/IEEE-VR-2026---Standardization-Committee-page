@@ -202,25 +202,6 @@
         max-width: 700px;
     }
     
-    .std-member-card {
-        background: white;
-        border-radius: 15px;
-        padding: 30px 20px;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        border-top: 4px solid #00D4AA;
-        min-height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .std-member-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 212, 170, 0.2);
-    }
-    
     .std-member-card-simple {
         background: white;
         border-radius: 15px;
@@ -229,7 +210,6 @@
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         border-top: 4px solid #1e2875;
-        min-height: 320px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -267,14 +247,56 @@
         line-height: 1.5;
     }
     
-    .std-member-bio {
-        text-align: left;
-        font-size: 0.9em;
-        color: #4a5568;
+    /* Biography Toggle Button */
+    .std-bio-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         margin-top: 15px;
-        padding-top: 15px;
-        border-top: 2px solid #e2e8f0;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #00D4AA 0%, #1e2875 100%);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 0.9em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 212, 170, 0.3);
+    }
+    
+    .std-bio-toggle:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 212, 170, 0.4);
+    }
+    
+    .std-bio-arrow {
+        transition: transform 0.3s ease;
+        font-size: 0.8em;
+    }
+    
+    .std-bio-arrow.rotated {
+        transform: rotate(180deg);
+    }
+    
+    /* Biography Content */
+    .std-member-bio {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+        text-align: justify;
+        font-size: 0.7em;
+        color: #4a5568;
         line-height: 1.7;
+        padding: 0 15px;
+    }
+    
+    .std-member-bio.expanded {
+        max-height: 500px;
+        margin-top: 15px;
+        padding: 15px;
+        border-top: 2px solid #e2e8f0;
     }
     
     @media (max-width: 1400px) {
@@ -373,39 +395,53 @@
             <img src="images/Yahya%20Hmaiti.jpg" alt="Yahya Hmaiti" class="std-member-photo">
             <div class="std-member-name">Yahya (Yohan) Hmaiti</div>
             <div class="std-member-affiliation">University of Central Florida, USA</div>
-            <!-- <div class="std-member-bio" style="text-align: justify;">
+            <button class="std-bio-toggle" onclick="toggleBio(this)">
+                <span>Show Biography</span>
+                <span class="std-bio-arrow">▼</span>
+            </button>
+            <div class="std-member-bio">
                 Yahya is a Ph.D. student in Computer Science at the University of Central Florida and a member of the Interactive Systems and User Experience (ISUE) Lab, advised by Dr. Joseph J. LaViola Jr. His research focuses on security and privacy, human-computer interaction in immersive environments, encompassing 3D user interfaces, virtual avatars, collaborative XR systems, and the application of machine learning within VR contexts. Yohan's current work explores new methods to improve privacy preference profiling, user-centred privacy and security, and the utilization of intelligent conversational virtual agents and natural language processing to enhance interaction in virtual environments.
-            </div> -->
+            </div>
         </div>
 
         <div class="std-member-card-simple">
-            <img src="images/default-profile.jpg" alt="Jen-Shuo Liu" class="std-member-photo">
+            <img src="images/jenshuo.jpg" alt="Jen-Shuo Liu" class="std-member-photo">
             <div class="std-member-name">Jen-Shuo Liu</div>
             <div class="std-member-affiliation">Columbia University, USA</div>
-            <!-- <div class="std-member-bio" style="text-align: justify;">
-                TODO
-            </div> -->
+            <button class="std-bio-toggle" onclick="toggleBio(this)">
+                <span>Show Biography</span>
+                <span class="std-bio-arrow">▼</span>
+            </button>
+            <div class="std-member-bio">
+                Jen-Shuo Liu is an AR/VR researcher and engineer focused on visual computing and HCI. He designs perception-based interfaces for teleoperation and maintenance while developing algorithms for HDR and immersive video processing. He holds a Ph.D. from Columbia University, where he focused on AR/VR precueing systems. His research is published in venues including IEEE TVCG, TIP, and ISMAR. An active community contributor, Jen-Shuo serves on the CHI Late-Breaking Work Program Committee, and as both the Publicity & Communications Chair and Pitch-Your-Lab Chair for IEEE ISMAR.
+            </div>
         </div>
 
         <div class="std-member-card-simple">
             <img src="images/Seonji%20kim.jpg" alt="Seonji Kim" class="std-member-photo">
             <div class="std-member-name">Seonji Kim</div>
             <div class="std-member-affiliation">KAIST, South Korea</div>
-            <!-- <div class="std-member-bio" style="text-align: justify;">
+            <button class="std-bio-toggle" onclick="toggleBio(this)">
+                <span>Show Biography</span>
+                <span class="std-bio-arrow">▼</span>
+            </button>
+            <div class="std-member-bio">
                 Seonji Kim is a Ph.D. student in the Graduate School of Culture Technology (GSCT) at KAIST, Daejeon, Korea, and a member of the Ubiquitous Virtual Reality (UVR) Lab, advised by Prof. Woontack Woo. Her research interests include ubiquitous virtual reality, augmented reality, remote collaboration, and spatial computing. She received her M.S. degree in GSCT from KAIST, Korea, in 2023 and her B.S. degree in Computer Science and Engineering from Sungkyunkwan University, Korea, in 2021. You can contact her at seonji.kim@kaist.ac.kr.
-            </div> -->
+            </div>
         </div>
         
         <div class="std-member-card-simple">
             <img src="images/Ryosuke%20Ichikari.jpg" alt="Ryosuke Ichikari" class="std-member-photo">
             <div class="std-member-name">Ryosuke Ichikari</div>
             <div class="std-member-affiliation">AIST, Japan</div>
-            <!-- <div class="std-member-bio" style="text-align: justify;">
+            <button class="std-bio-toggle" onclick="toggleBio(this)">
+                <span>Show Biography</span>
+                <span class="std-bio-arrow">▼</span>
+            </button>
+            <div class="std-member-bio">
                 Ryosuke Ichikari received his Ph.D. in engineering from Ritsumeikan University in 2010. After working at Ritsumeikan University, University of Southern California, he joined National Institute of Advanced Industrial Science and Technology (AIST). Currently, he is a research group leader at Research Institute on Human and Societal Augmentation, AIST. His research interest includes virtual/augmented/mixed reality and indoor positioning, and service engineering.
-            </div> -->
+            </div>
         </div>
-        
-
     </div>
 
     <h3>Committee Members</h3>
@@ -417,8 +453,6 @@
         </div>
         
         <div class="std-member-card-simple">
-            <!-- <img src="images/mykola.jpeg" alt="Mykola Maslych" class="std-member-photo"> -->
-            <!-- <img src="images/mykola.jpg" alt="Mykola Maslych" class="std-member-photo"> -->
             <img src="images/mykola.png" alt="Mykola Maslych" class="std-member-photo">
             <div class="std-member-name">Mykola Maslych</div>
             <div class="std-member-affiliation">University of Central Florida, USA</div>
@@ -449,20 +483,32 @@
             <img src="images/Takeshi%20Kurata.jpg" alt="Takeshi Kurata" class="std-member-photo">
             <div class="std-member-name">Takeshi Kurata</div>
             <div class="std-member-affiliation">AIST, Japan</div>
-            <!-- <div class="std-member-bio">
-                TODO
-            </div> -->
         </div>
         
         <div class="std-member-card-simple">
             <img src="images/Christine%20Perey.jpeg" alt="Christine Perey" class="std-member-photo">
             <div class="std-member-name">Christine Perey</div>
             <div class="std-member-affiliation">Spime Wrangler, Switzerland</div>
-            <!-- <div class="std-member-bio">
-                TODO
-            </div> -->
         </div>
     </div>
     
     </div><!-- Close std-committee-content -->
 </div><!-- Close std-committee-section -->
+
+<script>
+function toggleBio(button) {
+    const bioDiv = button.nextElementSibling;
+    const arrow = button.querySelector('.std-bio-arrow');
+    const text = button.querySelector('span:first-child');
+    
+    if (bioDiv.classList.contains('expanded')) {
+        bioDiv.classList.remove('expanded');
+        arrow.classList.remove('rotated');
+        text.textContent = 'Show Biography';
+    } else {
+        bioDiv.classList.add('expanded');
+        arrow.classList.add('rotated');
+        text.textContent = 'Hide Biography';
+    }
+}
+</script>
