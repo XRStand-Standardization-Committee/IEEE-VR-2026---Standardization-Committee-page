@@ -26,9 +26,23 @@
         padding: 0 20px;
     }
     
+    .std-title-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        margin-bottom: 10px;
+    }
+
+    .std-section-logo {
+        height: 4em;
+        width: auto;
+    }
+
     .std-committee-section h2 {
         color: #2d3748;
-        margin-bottom: 15px;
+        margin-bottom: 0;
         font-size: 2.5em;
         font-weight: 700;
         text-align: center;
@@ -320,11 +334,11 @@
             grid-template-columns: 1fr;
             max-width: 400px;
         }
-        
+
         .std-committee-section h2 {
             font-size: 2em;
         }
-        
+
         .std-panel-topics {
             grid-template-columns: 1fr;
         }
@@ -333,9 +347,10 @@
 
 <div class="std-committee-section" id="standardization-committee">
     <div class="std-committee-content">
-        <!-- reduce the size height and width proportionally by half the originakl size-->
-        <img src="images/logoBetter.png" alt="XRStand Logo" style="position: fixed; top: 50px; left: 80px; width: 600px; height: 180px;">
-        <h2>XR/VR Standardization Committee</h2>
+        <div class="std-title-row">
+            <img src="images/logoBetter.png" alt="XRStand Logo" class="std-section-logo">
+            <h2>XR/VR Standardization Committee</h2>
+        </div>
         <div class="std-conference-subtitle">IEEE VR 2026 · Daegu, Korea</div>
         <!-- <img src="images/logo.png" alt="IEEE VR 2026 Logo" style="display: block; margin: 0 auto 40px; max-width: 200px; opacity: 0.9;"> -->
         
